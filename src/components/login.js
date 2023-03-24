@@ -15,7 +15,7 @@ const Login = () => {
             const credential = GoogleAuthProvider.credentialFromResult(result)
             const token = credential.accessToken;
             const user = result.user;
-            navigate("/home")
+            if(user) navigate("/home")
         })
         .catch(err => console.error(err));
     }
