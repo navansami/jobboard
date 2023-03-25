@@ -9,6 +9,7 @@ const Home = () => {
     const onLogout = () => {
         signOut(auth)
             .then(() => {
+                console.log(auth)
                 navigate('/login')
             })
             .catch(err => console.error(err))
@@ -17,7 +18,7 @@ const Home = () => {
     return (
         <div>
             Home
-            <span onClick={onLogout} class="material-symbols-outlined">
+            <span onClick={onLogout} className="material-symbols-outlined">
                 logout
             </span>
         </div>

@@ -1,7 +1,17 @@
-button {
-    width: 240px;
-    height: 50px;
+:root,
+:root::before,
+:root::after {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    box-sizing: border-box;
 }
+
+body {
+    line-height: 1.6;
+    font-family:'Trebuchet MS';
+}
+
 
 .material-symbols-outlined {
   cursor: pointer;
@@ -10,4 +20,82 @@ button {
   'wght' 400,
   'GRAD' 0,
   'opsz' 48
+}
+
+.authform {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.login {
+    padding: 0;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+
+
+.register {
+    width: 50%;
+    height: 100%;
+}
+
+.form-group {
+    width: 60%;
+    padding: 2rem;
+    margin-inline: auto;
+    margin-block: 2rem;
+    box-shadow: 4px 5px 10px 5px 10px #999;
+    border-radius: .45rem;
+}
+
+.form-header {
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.form-control input[type="text"],
+.form-control input[type="password"] {
+    width: 100%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    padding: .3rem;
+    margin-block: .3rem;
+    border-bottom: 1px solid #333;
+}
+
+
+
+/* buttons */
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: .45rem 1rem;
+    text-transform: uppercase;
+}
+
+.google {
+    display: flex;
+
+    justify-content: center;
+}
+
+.g-icon {
+    background: url("../public/google-icon.png") no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
 }
